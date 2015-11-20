@@ -1,15 +1,44 @@
-﻿<Window x:Class="GeneratorTest.MainWindow"
+﻿<Window x:Class="GeneratorTest.Controller"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="626.527" Width="304.58">
+        Title="" SizeToContent="WidthAndHeight">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="2"/>
+            
+        </Style>
+    </Window.Resources>
     <StackPanel>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="120"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Content="Breite"/>
-            <TextBox Grid.Column="1"/>
+            <TextBox Grid.Column="1" Text="{Binding Width, UpdateSourceTrigger=PropertyChanged}"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="120"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Höhe"/>
+            <TextBox Grid.Column="1" Text="{Binding Height,UpdateSourceTrigger=PropertyChanged}"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="120"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Seed"/>
+            <TextBox Grid.Column="1" Text="{Binding Seed,UpdateSourceTrigger=PropertyChanged}"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Margin="2" Content="Ok"/>
         </Grid>
     </StackPanel>
 </Window>
