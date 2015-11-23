@@ -1,0 +1,8 @@
+﻿Read:
+- http://www-sop.inria.fr/reves/Basilic/2010/LLCDDELPZ10/LLCDDELPZ10STARPNF.pdf
+- https://www.factorio.com/blog/post/fff-112
+Add:
+- More Noise Generators
+- Calculation Time Indicator
+- Multithread?
+- Progressbar for Massiv Calculations
